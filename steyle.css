@@ -1,0 +1,136 @@
+:root {
+--cyan: hsl(179, 62%, 43%);
+--bright-yellow: hsl(71, 73%, 54%);
+
+--light-gray: hsl(204, 43%, 93%);
+--grayish-blue: hsl(218, 22%, 67%);
+
+--withe: hsl(0,0%, 100%,1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px; 
+    background-color: var(--light-gray);
+    min-height: 100vh;
+
+    /*wird in die mitte verschoben*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display:grid;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 10px hsla(0, 0%, 0%, .05);
+    max-width: 640px; 
+}
+
+.container > * {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-1 { 
+    background-color: var(--withe);
+    padding: 30px;    
+}
+
+.heading {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 30px;
+}
+.heading-2 {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    
+}
+.heading-text {
+    color: var(--grayish-blue);
+    line-height: 2;
+}
+.card-2 {
+    padding: 30px;
+    background-color: var(--cyan);
+}
+h3, b {
+    color: var(--withe);
+}
+h3 {
+    font-size: 18px;
+    letter-spacing: -0.225px;
+    font-weight: 700;
+}
+b {
+    font-size: 2rem;
+    font-weight:600;
+
+    flex-direction: column-reverse;
+    display: flex;
+}
+span {
+    font-size: 0.5rem;
+    opacity: .5; 
+    font-weight: 400; 
+    
+}
+
+p {
+    color: var(--withe, .75);
+
+}
+
+button {
+    color: var(--withe);
+    font-weight: 700;
+    background-color: var(--bright-yellow);
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 1rem 0; /*größe vom Button*/
+    margin-top: 0.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 5px 20px hsla(0, 0%, 0%, .25);
+}
+button:hover {
+    background-color: var(--withe);
+    color: var(--bright-yellow);
+    cursor: pointer;
+}
+.card-3{
+    background-color: var(--cyan);
+    color: var(--withe);
+    padding: 30px;
+    opacity: .75;
+}
+div.card-3{
+    line-height: 30px;
+    
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--grayish-blue);
+}
+  .attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 768px) {
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card-1 {
+        grid-column: 1 / span 2;
+    }
+    
+}
+
